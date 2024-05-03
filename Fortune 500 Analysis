@@ -65,8 +65,8 @@ SELECT * FROM fortune_companies;
 SELECT company_name, paid_time_off_days,
 CASE WHEN paid_time_off_days >=21 THEN "Generous"
 WHEN paid_time_off_days >= 18 THEN "Standard"
-WHEN paid_time_off_days <= 17 THEN "Poor"
-END AS "Entitlement"
+ELSE "Poor"
+END AS "entitlement"
 FROM fortune_companies;
 
 # Which industries tend to have the longest tenure? 
